@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lora', Arial, Helvetica, sans-serif;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto 40rem auto;
+    grid-template-rows: 10rem auto 30rem auto;
+    grid-template-areas:
+        "score title tricks"
+        ". ptop ."
+        "pleft mid pright"
+        ". pbottom .";
+}
+
+.score-board-left {
+    grid-area: score;
+}
+
+.title {
+    grid-area: title;
+}
+
+.score-board-right {
+    grid-area: tricks;
+}
+
+.player-top {
+    grid-area: ptop;
+}
+
+.player-left {
+    grid-area: pleft;
+}
+
+.middle-area {
+    grid-area: mid;
+}
+
+.player-right {
+    grid-area: pright;
+}
+
+.player-bottom {
+    grid-area: pbottom;
+}
+
+.score-board {
+    height: 7.5rem;
+    width: 15rem;
+    border: 0.2rem solid #eee;
+
+    .score *,
+    .team-names * {
+        display: inline;
+    }
+    .score > *,
+    .team-names > * {
+        margin-right: 1rem;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.player {
+    .player-list {
+        margin-left: 6rem;
+        position: relative;
+
+        .card {
+            position: absolute;
+            height: 9em;
+            width: 6.5rem;
+            filter: drop-shadow(0 0 0.1rem gray);
+            display: inline-block;
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.player-top,
+.player-bottom {
+    display: flex;
+    justify-content: flex-start;
+
+    .player-list-top,
+    .player-list-bottom {
+        margin-left: 6rem;
+    }
+}
+
+.player-left,
+.player-right {
+    .player-list-left,
+    .player-list-right {
+        transform: rotate(90deg);
+        margin-top: 25vh;
+    }
+}
