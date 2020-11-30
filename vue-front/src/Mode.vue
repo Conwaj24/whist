@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="mode">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <m-button size="max">Singleplayer</m-button>
+    <m-button size="max" router="game">Singleplayer</m-button>
     <m-button size="max" router="user">Multiplayer</m-button>
     <router-view/>
   </div>
@@ -11,14 +11,14 @@
 <script>
 
 export default {
-  name: 'App',
+  name: 'Mode',
   components: {
-    
+
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
