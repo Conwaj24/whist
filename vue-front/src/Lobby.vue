@@ -9,7 +9,7 @@
     <div id="app">
       <ejs-listview id="flat-list" :dataSource="dataSource"></ejs-listview>
     </div>
-    <m-button size="max">Start Game</m-button>
+    <m-button size="max" router="game">Start Game</m-button>
   </div>
 </template>
 

@@ -54,6 +54,7 @@ li {
   list-style: none;
     float: right;
     padding: 15px;
+    padding-right: 110px;
 }
 
 </style>
