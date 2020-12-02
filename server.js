@@ -1,5 +1,7 @@
 const app = require('express')()
 
+require('./ws')
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/test-client.html');
 })
