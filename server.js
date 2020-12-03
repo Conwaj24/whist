@@ -1,6 +1,9 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
 
 require('./ws')
+
+app.use('/shared', express.static(__dirname + '/shared'))
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/test-client.html');
